@@ -15,7 +15,9 @@ app.use(cors());
 
 // Replace with your email details
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 465, // Use 465 for SSL, or 587 for TLS
+    secure: true, // Use true for port 465 (SSL)
     auth: {
         user: 'cameronnickerson97@gmail.com', // Your Gmail address
         pass: 'qeqp awnd prri bxjw'           // Your Gmail app password
@@ -35,9 +37,10 @@ app.post('/send-email', (req, res) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.error('Error sending email:', error);
-            return res.status(500).json({ status: 'error', message: 'Email could not be sent. Please try again later.' });
+            console.error('Error sending email:', error); // Log the full error stack for debugging
+            return res.status(500).json({ status: 'error', message: `Email could not be sent. Error: ${error.message}` });
         }
+        console.log('Email sent successfully:', info.response);
         res.status(200).json({ status: 'success', message: 'Your message has been sent!' });
     });
 });
