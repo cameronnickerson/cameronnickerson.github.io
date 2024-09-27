@@ -42,13 +42,13 @@ app.post('/send-email', (req, res) => {
     });
 });
 
+// Serve static assets (like styles.css and scripts.js) from the root directory
+app.use(express.static(__dirname));
+
 // Serve index.html directly from the root of the project
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
-
-// Serve static assets (like styles.css and scripts.js) from the root directory
-app.use(express.static(__dirname));
 
 // Start the server
 app.listen(PORT, () => {
