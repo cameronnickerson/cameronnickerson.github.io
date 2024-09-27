@@ -69,7 +69,7 @@ nav ul li a {
 .headshot-header {
     border-radius: 50%; /* Makes the image circular */
     width: 20%; /* Responsive size relative to viewport */
-    max-width: 300px; /* Caps the image size */
+    max-width: 150px; /* Caps the image size */
     height: auto; /* Keeps aspect ratio */
     margin-bottom: 15px; /* Space below the image */
     object-fit: cover; /* Ensures the image doesn't distort */
