@@ -18,8 +18,8 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
-    position: sticky;
-    top: 0;
+    position: static;
+    top: auto;
     z-index: 100;
 }
 
