@@ -1,70 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Names the page -->
-    <title>
-        Home Page
-    </title>
-
-    <!-- Make the encoding unicode -->
     <meta charset="UTF-8">
-    <!-- Ensures that the scaling adjusts with the end-users device -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif
-        }
-    </style>
-
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cameron Nickerson</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <h1>
-        <p style="text-align: center;">
-            Cameron Nickerson
-        </p>
-    </h1>
-    <nav>
-        <p style="text-align: center;">
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <!-- <li><a href="#projects">Projects</a></li> -->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <!-- Headshot Image -->
+            <img 
+                src="https://raw.githubusercontent.com/cameronnickerson/cameronnickerson.github.io/main/images/Nickerson_Cameron_0423_bw_web.jpg"
+                alt="Cameron Nickerson"
+                class="headshot-header"
+            >
+            <h1>Cameron Nickerson</h1>
+            <p>Engineer | Designer | Programmer</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            <p>
+                <p>
+                    Hello, and welcome!
+                    I'm a passionate Solutions Engineer and Data Enthusiast with a drive for solving problems and creating effective solutions.
+                    My expertise primarily revolves around process engineering, data engineering, and business intelligence. Over the years working at a 
+                    Fortune 500 company, I've built a strong foundation in technologies like SQL, Python, Power BI, and Visual Basic for Applications (VBA). 
+                    I'm always eager to learn and stay updated with the latest trends in technology and design. When I'm not coding, you can find me exploring 
+                    hiking trails, discovering new places outdoors, or spending quality time with my family. If you would like to get to know me more, please 
+                    do not hesitate to reach out through the contact form provided below. Talk soon!
+                </p>
+                
+            </p>
             
-            <a href="">
-                <b>
-                    About Me
-                </b>
-            </a>
-
-            <a href="">
-                <b>
-                    Skills
-                </b>
-            </a>
-
-            <a href="">
-                <b>
-                    Projects
-                </b>
-            </a>
-
-            <a href="">
-                <b>
-                    Contact
-                </b>
-            </a>
-            
         </p>
-    </nav>
-    <p style="text-align: center;">
-        <img 
-            src="https://raw.githubusercontent.com/cameronnickerson/cameronnickerson.github.io/main/images/Nickerson_Cameron_0423_bw_web.jpg"
-            alt="Cameron Nickerson's Professional Headshot"
-            width="500">
-    </p>
+    </section>
 
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><b>Languages:</b> Python (Data Analysis, Scripting), Power Query M (Data Transformation), Visual Basic for Applications (VBA for Excel Automation)</li>
+            <li><b>Databases & SQL:</b> SQL (IBM Db2 for querying and managing large datasets)</li>
+            <li><b>Data Engineering:</b> ETL Processes (Data Integration and Cleaning)</li>
+            <li><b>Data Analysis:</b> Exploratory Data Analysis (EDA), Data Wrangling (Pandas, NumPy)</li>
+            <li><b>Version Control:</b> Git/GitHub (Branching, Merging)</li>
+            <li><b>Operating Systems:</b> Linux (Command-Line Scripting)</li>
+            <li><b>Data Tools:</b> Jupyter Notebooks (Prototyping & Visualization), Power BI (Dashboard Creation & Reporting), Excel (Data Analysis & Automation)</li>
+        </ul>
+    </section>
+    
+
+    <!-- Projects Section -->
+    <!-- <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Project One</h3>
+            <p>A brief description of your project...</p>
+        </div>
+        <div class="project-card">
+            <h3>Project Two</h3>
+            <p>A brief description of your project...</p>
+        </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm" action="/send-email" method="post">
+            <label for="name"><b>Name:</b></label>
+            <input type="text" id="name" name="name" required>
+            <label for="email"><b>Email:</b></label>
+            <input type="email" id="email" name="email" required>
+            <label for="message"><b>Message:</b></label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit"><b>Send</b></button>
+        </form>
+        <!-- Feedback div for displaying messages -->
+        <div id="form-feedback" style="display:none; margin-top: 10px;"></div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Cameron Nickerson. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
-
-
-
 </html>
