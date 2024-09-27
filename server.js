@@ -1,6 +1,3 @@
-// server.js
-require('dotenv').config(); // Load environment variables from .env
-
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
@@ -15,21 +12,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-// Use environment variables for security
+// Gmail credentials (prefer environment variables, fallback to hardcoded values)
 const GMAIL_USER = process.env.GMAIL_USER || 'cameronnickerson97@gmail.com'; // Your Gmail address
-const GMAIL_PASS = process.env.GMAIL_PASS || 'qeqp awnd prri bxjw'; // Your Gmail App Password
+const GMAIL_PASS = process.env.GMAIL_PASS || 'qeqp awnd prri bxjw'; // Your Gmail App Password (replace this if hardcoding)
 
 // Nodemailer Transporter Configuration
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465, // Use 465 for SSL
-    secure: true, // Use true for SSL
+    secure: true, // Use true for port 465 (SSL)
     auth: {
         user: GMAIL_USER,
         pass: GMAIL_PASS
     },
     logger: true, // Enable logging for debugging
-    debug: true // Include SMTP traffic in logs
+    debug: true // Include SMTP traffic in the logs
 });
 
 // Validate SMTP configuration
