@@ -3,6 +3,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -35,12 +36,18 @@ app.post('/send-email', (req, res) => {
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error('Error sending email:', error);
-            // Send error response to client
             return res.status(500).json({ status: 'error', message: 'Email could not be sent. Please try again later.' });
         }
-        // Send success response to client
         res.status(200).json({ status: 'success', message: 'Your message has been sent!' });
     });
+});
+
+// Serve static files from "public" directory (if you have an index.html)
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Fallback route for GET /
+app.get('/', (req, res) => {
+    res.send('Welcome to my server!'); // Simple text response
 });
 
 // Start the server
