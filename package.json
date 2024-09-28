@@ -4,6 +4,7 @@
   "description": "- Design, develop, and maintain data models, dashboards, and reports to provide actionable insights for decision-making across the organization.\r - Extract, transform, and load (ETL) data from multiple sources into centralized data warehouses or data lakes, ensuring data integrity and accessibility.\r - Collaborate with stakeholders across business units to gather requirements and deliver custom analytics solutions tailored to their needs.\r - Analyze and interpret complex data sets to identify trends, patterns, and opportunities for business process improvements.\r - Optimize and maintain business intelligence tools and systems, ensuring efficient performance and scalability for large data sets.",
   "main": "scripts.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
