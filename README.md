@@ -2,11 +2,11 @@
 ## **Professional Experience**
 ### **Jackson Financial** | *June 2016 - Present*
 #### **Senior Distribution Command Center Analyst** | *February 2022 - Present*
-- Design, develop, and maintain data models, dashboards, and reports to provide actionable insights for decision-making across the organization.
+<!-- - Design, develop, and maintain data models, dashboards, and reports to provide actionable insights for decision-making across the organization.
 - Extract, transform, and load (ETL) data from multiple sources into centralized data warehouses or data lakes, ensuring data integrity and accessibility.
 - Collaborate with stakeholders across business units to gather requirements and deliver custom analytics solutions tailored to their needs.
 - Analyze and interpret complex data sets to identify trends, patterns, and opportunities for business process improvements.
-- Optimize and maintain business intelligence tools and systems, ensuring efficient performance and scalability for large data sets.
+- Optimize and maintain business intelligence tools and systems, ensuring efficient performance and scalability for large data sets. -->
 
 #### **Operations Command Center Controller** | *July 2019 - February 2022*
 - Utilized Visual Basic for Applications (VBA) to automate common processes and reporting, improving efficiency.
